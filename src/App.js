@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './Components/Header';
+import LatestNews from './Components/LatestNews';
+import Business from './Components/Business';
+import Entertainment from './Components/Entertainment';
+import Health from './Components/Health';
+import Science from './Components/Science';
+import Sports from './Components/Sports';
+import Technology from './Components/Technology';
+import General from './Components/General';
 import './App.css';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+    <Header/>
+    <General/> 
+    <Switch>
+         <Route exact path='/' component={LatestNews}/>
+         <Route  path='/business' component={Business}/>
+         <Route  path='/entertainment' component={Entertainment}/>
+         <Route  path='/health' component={Health}/>
+         <Route  path='/science' component={Science}/>
+         <Route  path='/sports' component={Sports}/>
+         <Route  path='/technology' component={Technology}/>
+     
+     </Switch>
     </div>
+    </BrowserRouter>
+   
   );
 }
 
