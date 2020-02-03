@@ -14,7 +14,7 @@ class Header extends React.Component {
  <div className="jumbotron bg-success center col-lg-9 col-md-9 col-sm-9">
  <center>
  <div className="bg-light cover">
- <img src="../img/logo1.png" className="img-fluid cover-img" alt="logo" />
+ <img src="../img/logo1.png" className="img-fluid header-img cover-img" alt="logo"  />
 
 
 </div>
